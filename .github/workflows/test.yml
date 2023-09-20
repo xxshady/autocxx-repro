@@ -10,12 +10,6 @@ jobs:
     runs-on: windows-2022
 
     steps:
-      - name: Install winget
-        uses: Cyberboss/install-winget@v1
-      - name: Install latest LLVM (clang)
-        shell: powershell
-        run: |
-          winget install LLVM.LLVM --accept-source-agreements --silent
       - name: Clang version
         run: |
           clang --version
