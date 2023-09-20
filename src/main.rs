@@ -4,4 +4,6 @@ include_cpp! {
     name!(repro)
 }
 
-fn main() {}
+fn main() {
+    println!("test");
+}
