@@ -24,7 +24,6 @@ jobs:
 
       matrix:
         include:
-          - rust: stable
           # Windows GNU disabled due to https://github.com/google/autocxx/issues/1134
           # - name: Windows (gnu)
           #    rust: nightly-x86_64-pc-windows-gnu

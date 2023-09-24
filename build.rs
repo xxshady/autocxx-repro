@@ -3,6 +3,6 @@ fn main() {
         .extra_clang_args(&["-std=c++20"])
         .build()
         .unwrap()
-        .flag("/std:c++20")
+        // .flag("/std:c++20")
         .compile("repro");
 }
