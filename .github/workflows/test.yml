@@ -1,5 +1,14 @@
 name: Test
 
+env:
+  RUST_BACKTRACE: short
+  # CI builds don't benefit very much from this and it has bugs
+  CARGO_INCREMENTAL: 0
+  # We can't use a debugger in CI, and this makes builds faster and the cache
+  # smaller. (TODO: use -Cdebuginfo=0 if it doesn't make backtraces useless)
+  RUSTFLAGS: -Cdebuginfo=1
+  CARGO_TERM_COLOR: always
+
 on:
   push:
     branches: "*"
