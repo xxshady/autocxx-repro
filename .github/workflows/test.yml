@@ -62,9 +62,11 @@ jobs:
 
       - name: remove llvm from path
         if: matrix.os == 'windows'
+        shell: cmd
         run: set PATH=%PATH:C:\Program Files\LLVM\bin;=%
       - name: output PATH
         if: matrix.os == 'windows'
+        shell: cmd
         run: echo %PATH%
       - name: Exclude failing targets and tests
         # no creduce on Windows, so exclude tests needing creduce there
