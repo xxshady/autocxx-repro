@@ -1,5 +1,5 @@
 fn main() {
-    autocxx_build::Builder::new("src/main.rs", [&"src"])
+    autocxx_build::Builder::new("src/lib.rs", ["src"])
         .extra_clang_args(&["-std=c++20"])
         .build()
         .unwrap()

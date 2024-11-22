@@ -4,6 +4,6 @@ include_cpp! {
     name!(repro)
 }
 
-fn main() {
+pub fn main() {
     println!("test");
 }
